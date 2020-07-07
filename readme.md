@@ -1,5 +1,5 @@
-#ES6 Classes with Avengers 
-##A GrowDev tutorial
+# ES6 Classes with Avengers 
+## A GrowDev tutorial
 
 This exercise deals with the explanation of classes using Marvel's Avengers as examples.
 
