@@ -64,3 +64,9 @@ var thor = new Vingador("Thor", "1.85", "100kg", ["Deus do Trov√£o", "Super for√
 document.getElementById("lutar").onclick = function () {
   thor.lutar();
 };
+
+var ironMan = new Vingador("Iron Man", "1.85", "90kg", ["Wealth", "Genius-level IQ", "Wealth again", "Strenght via armor", "Durabilty via armor", "Did I mention wealth?"], true, true, true, false);
+
+document.getElementById("ferrolho").onclick = function () {
+  return ironMan.lutar();
+};
