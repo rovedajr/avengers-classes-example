@@ -1,59 +1,35 @@
-class Pessoa {
-  constructor(nome, altura, peso) {
-    this.nome = nome;
-    this.altura = altura;
-    this.peso = peso;
-  }
-}
+const arr = [1, 2, 3, 4, 5, 6]
 
-class Vingador extends Pessoa {
-  constructor(
-    nome,
-    altura,
-    peso,
-    poderes,
-    temArmadura,
-    temArma,
-    isMembroFundador,
-    isImortal
-  ) {
-    super(nome, altura, peso);
-    this.poderes = poderes;
-    this.temArmadura = temArmadura;
-    this.temArma = temArma;
-    this.isMembroFundador = isMembroFundador;
-    this.isImortal = isImortal;
-  }
+// const squareArr = arr.map((e, i) => e + i)
 
-  lutar() {
-    alert(`${this.nome} está lutando usando ${this.poderes[1]}`);
-  }
-}
+// const sum = arr.reduce((total, next) => total + next) // somartodos os itens do array
 
-const thor = new Vingador(
-  "Thor",
-  "1.85",
-  "100kg",
-  ["Deus do Trovão", "Super força", "Vôo", "Longevidade"],
-  true,
-  true,
-  false
-);
+const average = arr.reduce((total, amount, index, array) => {
+    total += amount
+    if (index === array.length - 1) {
+        return total / array.length
+    } else {
+        return total
+    }
+})
 
-document.getElementById("lutar").onclick = function () {
-  thor.lutar();
-};
+// console.log(average);
+
+const cesta = ['banana', 'cereja', 'laranja', 'maçã', 'cereja', 'laranja', 'maçã', 'banana', 'cereja', 'laranja', 'figo']
+
+const contagem = cesta.reduce((conta, fruta) => {
+    conta[fruta] = (conta[fruta] || 0) + 1
+    return conta
+}, {})
 
 
-const ironMan = new Vingador(
-  "Iron Man",
-  "1.85",
-  "90kg",
-  ["Wealth", "Genius-level IQ", "Wealth again", "Strenght via armor", "Durabilty via armor", "Did I mention wealth?"],
-  true,
-  true,
-  true,
-  false
-)
+console.log(contagem);
 
-document.getElementById("ferrolho").onclick = () => ironMan.lutar()
+
+const filtro = arr.filter((e) => e % 2 === 0)
+
+console.log(filtro);
+
+const find = cesta.find((e) => e === 'banana')
+
+console.log(find);
