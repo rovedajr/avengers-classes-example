@@ -2,7 +2,7 @@ const arr = [1, 2, 3, 4, 5, 6]
 
 // const squareArr = arr.map((e, i) => e + i)
 
-// const sum = arr.reduce((total, next) => total + next) // somartodos os itens do array
+const sum = arr.reduce((total, next) => total + next) // somartodos os itens do array
 
 const average = arr.reduce((total, amount, index, array) => {
     total += amount
@@ -33,3 +33,13 @@ console.log(filtro);
 const find = cesta.find((e) => e === 'banana')
 
 console.log(find);
+
+let namae = { nome: 'Antonio', idade: 33 }
+
+const treta = x => namae.idade = x
+
+namae.idade = treta(66)
+
+console.log(namae);
+
+const teste = () => ({ nome: 'Dirceu' }) // arrow function PRECISA dos () para retornar um objeto literal

@@ -1,7 +1,10 @@
 "use strict";
 
 var arr = [1, 2, 3, 4, 5, 6]; // const squareArr = arr.map((e, i) => e + i)
-// const sum = arr.reduce((total, next) => total + next) // somartodos os itens do array
+
+var sum = arr.reduce(function (total, next) {
+  return total + next;
+}); // somartodos os itens do array
 
 var average = arr.reduce(function (total, amount, index, array) {
   total += amount;
@@ -27,3 +30,20 @@ var find = cesta.find(function (e) {
   return e === 'banana';
 });
 console.log(find);
+var namae = {
+  nome: 'Antonio',
+  idade: 33
+};
+
+var treta = function treta(x) {
+  return namae.idade = x;
+};
+
+namae.idade = treta(66);
+console.log(namae);
+
+var teste = function teste() {
+  return {
+    nome: 'Dirceu'
+  };
+}; // arrow function PRECISA dos () para retornar um objeto literal
